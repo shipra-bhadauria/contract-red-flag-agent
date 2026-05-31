@@ -1,0 +1,28 @@
+EMPLOYMENT AGREEMENT
+
+This Employment Agreement is entered into as of January 1, 2025, 
+between TechCorp Pvt Ltd ("Company") and the undersigned ("Employee").
+
+1. POSITION
+Employee will serve as Software Engineer. Company reserves the right 
+to change Employee's role at any time without notice or compensation.
+
+2. COMPENSATION
+Monthly salary of INR 50,000. Company may change compensation at 
+its sole discretion without prior notice to Employee.
+
+3. NON-COMPETE
+Employee agrees not to work for any competitor for 3 years after 
+termination. This applies worldwide across all industries.
+
+4. TERMINATION
+Company may terminate Employee at any time without notice, reason, 
+or severance payment.
+
+5. INTELLECTUAL PROPERTY
+All work created by Employee, including personal projects created 
+outside working hours, shall be property of the Company.
+
+6. CONFIDENTIALITY
+Employee must keep all company information confidential for 10 years 
+after termination.
