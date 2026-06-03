@@ -11,7 +11,9 @@ For each red flag you find, return the following in JSON format:
             "clause" : "The exact or paraphrased problematic clause from the contract",
             "explanation" : "Plain english explanation of why this is risky and what the standard should be",
             "suggested_clause" : "REQUIRED: A better , fairer version of this clause. Always include this."
-    ]
+        }
+    ],
+    "low_confidence" : true or false
 }
 
 Severity guide :
@@ -20,16 +22,25 @@ Severity guide :
 - low : Missing clauses or minor issue worth noting
 
 Suggested clause guide:
-- Write a specific , practical replacement clause
-- Use simple plain English, not complex legal jargon
+- write a specific , practical replacement clause
+- Use simple plain english, not complex legal jargon
 - Make it fair for both parties
-- Keep it concise  1-3 sentences maximum
-- If a clause is missing entirely , suggest what should be added
+- Keep it concise 1-3 sentences maximum
+- If a clause is missing entirely, suggest what should be added 
+
+Confidence rule:
+- Always include "low_confidence" as the last field in your JSON
+- set "low_confidence": true if any of these apply:
+    * Contract text is under 100 words
+    * Text appears grabled, corrupted, or poorly scanned
+    * Content does not resemble a legal contract at all
+- Otherwise always set "low_confidence" : false
 
 Rules :
 - Return ONLY the JSON - no extra text, no markdown , no explanation outside the JSON
 - Be specific - quote the actual clause where possible
 - Think like a lawyer protectting the person signing, not the company
-- If no red flags found, return: {"red_flags":[]}
+- If no red flags found, return: {"red_flags":[],
+"low_confidence": false}
 
 

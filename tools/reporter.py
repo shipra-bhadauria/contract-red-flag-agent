@@ -20,7 +20,7 @@ def generate_questions(red_flags):
 
     response = client.messages.create(
         model="claude-sonnet-4-5",
-        max_tokens=300,
+        max_tokens=800,
         messages=[
             {
                 "role":"user",
@@ -39,9 +39,7 @@ def generate_questions(red_flags):
 
         
 
-    questions = json.loads(raw)
-    return questions
-
+    
 def build_report(red_flags, score_result):
     """Combine everything into one clean report dictionary."""
 

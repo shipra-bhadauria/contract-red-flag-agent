@@ -35,5 +35,5 @@ def analyze_contract(contract_text):
     raw = raw.replace("```json", "").replace("```","").strip()
 
     result = json.loads(raw)
-    return result["red_flags"]
+    return result
     

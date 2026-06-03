@@ -4,7 +4,8 @@ Based on these red flags, provide an overall risk assessment in JSON format:
 {
     "risk_score": <number between 0 to 100>,
     "verdict" : "Safe" or "Review Recommended" or "High Risk" or "Do not Sign",
-    "summary" : "2-3 sentence plain English summary of the overall risk"
+    "summary" : "2-3 sentence plain English summary of the overall risk",
+    "confidence" : "high" or "medium" or "low"
 }
 
 Scoring guide:
@@ -13,9 +14,14 @@ Scoring guide:
 - 51-75: High Risk - multiple serious issues
 - 76-100: Do not Sign - critical clauses present
 
+Confidence level guide:
+- "high" : score is clearly in one band, multilple flags support the verdict
+- "medium" : score is near a band boundary (e.g. 45-55), or flags are mixed severity
+- "low" : very few flags found in a long contract, or score is between 38-62 with no high severity flags
+
 Rules : 
 - Return ONLY the JSON - no extra text, no markdown
 - Even one "high" severity flag should push score above 50.
 - Two or more "high" severity flags should push score above 75.
 - Think like a lawyer protecting the person signing
- 
+= Always include confidence level as the last field
